@@ -1,0 +1,23 @@
+scalar Date
+
+
+# noinspection GraphQLMissingType,GraphQLUnresolvedReference,GraphQLEmptyType
+type Query {
+    countries(page: Int, size: Int): CountryConnection
+}
+
+type Mutation {
+    addCountry(input: CountryInput!): Country!
+    editCountry(countryCode: String!, countryName: String!): Country!
+}
+
+type Country {
+    id: ID!
+    countryName: String!,
+    countryCode: String!
+}
+
+input CountryInput {
+    countryName: String!,
+    countryCode: String
+}
