@@ -11,6 +11,8 @@ public interface CountryService {
 
     List<Country> allCountries();
 
+    List<CountryGql> allGqlCountries();
+
     Slice<CountryGql> allGqlCountries(Pageable pageable);
 
     Country addCountry(String countryName, String countryCode);

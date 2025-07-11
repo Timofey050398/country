@@ -2,6 +2,10 @@ server:
   port: 8181
 
 spring:
+  grpc:
+    server:
+      servlet:
+        enabled: false
   application:
     name: country
   datasource:
